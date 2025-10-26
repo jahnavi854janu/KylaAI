@@ -58,7 +58,27 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
+@st.cache_resource
+def setup_nltk():
+    try:
+        nltk.data.find("tokenizers/punkt")
+    except LookupError:
+        nltk.download("punkt")
+    try:
+        nltk.data.find("corpora/wordnet")
+    except LookupError:
+        nltk.download("wordnet")
+    try:
+        nltk.data.find("corpora/omw-1.4")
+    except LookupError:
+        nltk.download("omw-1.4")
+    try:
+        nltk.data.find("corpora/stopwords")
+    except LookupError:
+        nltk.download("stopwords")
 
+# Run setup once
+setup_nltk()
 # Download required NLTK data
 @st.cache_resource
 def download_nltk_data():
