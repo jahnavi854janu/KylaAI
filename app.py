@@ -15,7 +15,7 @@ from datetime import datetime
 
 # Page configuration
 st.set_page_config(
-    page_title="ChatMate",
+    page_title="IvyAI",
     page_icon="🤖",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -367,7 +367,7 @@ with st.sidebar:
 
 
 # Main chat interface
-st.title("💬 ChatMate")
+st.title("💬IvyAI")
 st.markdown("**Powered by Natural Language Processing**")
 st.markdown("---")
 
